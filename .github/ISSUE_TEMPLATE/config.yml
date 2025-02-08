@@ -1,0 +1,2 @@
+# 禁用使用空模板创建 issue
+blank_issues_enabled: false

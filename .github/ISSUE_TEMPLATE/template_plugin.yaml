@@ -1,0 +1,38 @@
+name: 发布插件于 SkiBot 官方插件库
+description: 请将插件的相关信息填入此表单，我们将于近期完成审核。
+labels: []
+body:
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: 检查清单
+      description: 请认真检查以下清单中的每一项，并在相符的项前打勾。
+      options:
+        - required: false
+          label: 符合 Skibot 插件上架规范。
+        - required: false
+          label: 插件经过测试，确定没有大的问题。
+  - type: textarea
+    id: config-file
+    validations:
+      required: true
+    attributes:
+      label: 插件相关信息
+      description: 请在双引号中填写，不要修改格式。
+      value: |
+        ```json
+        {
+            "name": "",
+            "description": "",
+            "avatar": "",
+            "git-url": ""
+        }
+        ```
+  - type: input
+    id: git-url
+    attributes:
+      label: 插件开源地址
+      description: 请输入您的插件开源地址（不限制平台）
+      placeholder: "如: https://github.com/username/repo"
+    validations:
+      required: true
